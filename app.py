@@ -3,7 +3,7 @@ import pickle
 
 # Set up the web page styling
 st.set_page_config(page_title="Language Detector", page_icon="🌐", layout="centered")
-st.title("🌐 Language Detection Model")
+st.title("🌐 ZED-F Language Detection Model")
 st.write("Type any sentence below, and the model will predict its language!")
 
 # 1. Load the saved model and vectorizer safely
@@ -21,7 +21,7 @@ except Exception as e:
     st.error("Error loading model files. Make sure .pkl files are in the same folder.")
 
 # 2. Build the user interface text input
-user_input = st.text_area("Enter text here:", placeholder="e.g., ผมชื่อปราดีป ยาดัฟ")
+user_input = st.text_area("Enter text here:", placeholder="e.g., My name is Pradeep Yadav")
 
 if st.button("Predict Language"):
     if user_input.strip() == "":
